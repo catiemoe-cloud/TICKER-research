@@ -1,23 +1,28 @@
-"""Peer P/E valuation for Asbury Automotive (all inputs are editable)."""
+"""Peer P/E valuation for Apple (all inputs are editable)."""
 
 from statistics import median
 
 
-# Editable inputs: prices are dollars; diluted EPS is GAAP FY2024 diluted EPS.
+# Editable inputs: prices are September 10, 2026 closes; EPS is annual GAAP diluted EPS.
 TARGET = {
-    "ticker": "ABG",
-    "name": "Asbury Automotive",
-    "price": 243.03,
-    "diluted_eps": 21.50,
+    "ticker": "AAPL",
+    "name": "Apple",
+    "price": 315.34,
+    "diluted_eps": 7.46,
 }
 
 PEERS = [
-    {"ticker": "AN", "name": "AutoNation", "price": 169.84, "diluted_eps": 16.92},
     {
-        "ticker": "GPI",
-        "name": "Group 1 Automotive",
-        "price": 421.48,
-        "diluted_eps": 36.81,
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "price": 492.44,
+        "diluted_eps": 17.95,
+    },
+    {
+        "ticker": "GOOGL",
+        "name": "Alphabet Class A",
+        "price": 332.60,
+        "diluted_eps": 10.81,
     },
 ]
 
