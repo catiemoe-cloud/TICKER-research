@@ -13,7 +13,7 @@ DILUTED_SHARES = 14594.18  # Shares outstanding as of July 17, 2026.
 # Sensitivity and reverse-DCF inputs: edit these values as needed.
 SENSITIVITY_WACCS = [0.07, 0.08, 0.09]
 SENSITIVITY_TERMINAL_GROWTHS = [0.02, 0.03, 0.04]
-TARGET_SHARE_PRICE = 315.34
+TARGET_SHARE_PRICE = 337.00
 REVERSE_SHIFT_LOWER = -0.05
 REVERSE_SHIFT_UPPER = 0.10
 CASE_LABEL = "Apple"

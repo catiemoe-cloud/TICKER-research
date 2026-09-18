@@ -3,11 +3,11 @@
 from statistics import median
 
 
-# Editable inputs: prices are September 10, 2026 closes; EPS is annual GAAP diluted EPS.
+# Editable inputs: prices are September 17, 2026 closes; EPS is annual GAAP diluted EPS.
 TARGET = {
     "ticker": "AAPL",
     "name": "Apple",
-    "price": 315.34,
+    "price": 337.00,
     "diluted_eps": 7.46,
 }
 
@@ -15,13 +15,13 @@ PEERS = [
     {
         "ticker": "MSFT",
         "name": "Microsoft",
-        "price": 492.44,
+        "price": 497.75,
         "diluted_eps": 17.95,
     },
     {
         "ticker": "GOOGL",
         "name": "Alphabet Class A",
-        "price": 332.60,
+        "price": 347.33,
         "diluted_eps": 10.81,
     },
 ]
