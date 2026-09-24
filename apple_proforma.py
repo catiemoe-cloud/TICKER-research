@@ -101,7 +101,7 @@ MARKET_PRICE_SOURCE = "Yahoo Finance AAPL historical prices: https://finance.yah
 # Attaking Partners Company
 # Question: Why did you assume Chipotle can keep growing same-store sales at that
 # rate when customers might cut back on eating out if the economy slows down?
-# Possible response: I used that rate because Chipotle has had strong pricing power
+# Response: I used that rate because Chipotle has had strong pricing power
 # and customer traffic, but I would lower it if traffic starts falling or management
 # says consumers are spending less.
 
