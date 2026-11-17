@@ -23,6 +23,7 @@ Education, not investment advice.
 | Cost stress | The app applies a 50-basis-point annual portfolio cost drag. | App stress table |
 | Constraint stress | The app increases the BIL minimum from 10% to 20%. | App stress table |
 | Point-in-time monitor | App requests the selected ALFRED vintage and displays source/date/fallback status. | `app.py`; inspect live app output before submission |
+| Partner cold run | A partner followed the GitHub README without coaching; the app opened with no failure in about one minute. | `Lab 20.md` |
 
 ## Limitations and monitoring
 
