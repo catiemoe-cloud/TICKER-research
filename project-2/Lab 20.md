@@ -43,10 +43,7 @@
 
 ## V — Locked Changed-Input Record
 
-> **AI closed from this point until the prediction is committed and pushed.** I must write the
-> prediction myself in `docs/validation-and-ai-use.md` before running the change. I will record
-> the exact old/new input, units, expected direction, expected decision effect, timestamp, and
-> commit hash. After the run, I will add before/after output and explain the actual result.
+> **AI closed from this point until the prediction is committed and pushed.**At 2:09 PM on November 17, 2026, with AI off, I predict that if the Fallback latest spread (%) is increased above the median, there will be an error. The old value is 0.84%, and the median is 0.84%. I predict that the window stress moves an allocation by 25 points or more.
 
 ## Explain the code
 
