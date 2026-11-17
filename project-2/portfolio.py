@@ -259,6 +259,80 @@ def search_long_only_mix(
     return best
 
 
+def evaluate_mandate(
+    weights, sleeves, correlations, objective, minimum_bil, maximum_asset, annual_cost=0.0
+):
+    """Measure one portfolio against the Project 2 cautious-growth mandate."""
+    covariances = covariance_matrix(sleeves, correlations)
+    gross_return = expected_return(weights, sleeves)
+    net_return = gross_return - annual_cost
+    total_weight = sum(weights.values())
+    lowest_weight = min(weights.values())
+    largest_asset = max(weights, key=weights.get)
+    largest_weight = weights[largest_asset]
+    checks = {
+        "Weights sum to 100%": abs(total_weight - 1.0) < 1e-9,
+        "Long-only": lowest_weight >= -1e-9,
+        f"Net return estimate at least {objective:.1%}": net_return >= objective,
+        f"BIL at least {minimum_bil:.0%}": weights.get("BIL", 0.0) >= minimum_bil,
+        f"No ETF above {maximum_asset:.0%}": largest_weight <= maximum_asset,
+    }
+    return {
+        "weights": weights,
+        "gross_return": gross_return,
+        "net_return": net_return,
+        "annual_cost": annual_cost,
+        "volatility": portfolio_volatility(weights, covariances),
+        "bil_weight": weights.get("BIL", 0.0),
+        "largest_asset": largest_asset,
+        "largest_weight": largest_weight,
+        "checks": checks,
+        "verdict": "PASS" if all(checks.values()) else "FAIL",
+    }
+
+
+def search_project2_mix(
+    sleeves, correlations, objective, minimum_bil, maximum_asset, annual_cost=0.0, step=0.05
+):
+    """Return the lowest-volatility long-only Project 2 mix, or None if infeasible."""
+    validate_correlations(sleeves, correlations)
+    if "BIL" not in sleeves:
+        raise ValueError("The Project 2 mandate requires BIL in the price CSV.")
+    if step <= 0 or abs(round(1.0 / step) * step - 1.0) > 1e-9:
+        raise ValueError("Step must divide 100% exactly.")
+
+    names = list(sleeves)
+    units = round(1.0 / step)
+    best = None
+
+    def try_allocations(index, remaining, current):
+        nonlocal best
+        if index == len(names) - 1:
+            weights = current.copy()
+            weights[names[index]] = remaining * step
+            if max(weights.values()) > maximum_asset + 1e-9:
+                return
+            result = evaluate_mandate(
+                weights, sleeves, correlations, objective, minimum_bil, maximum_asset, annual_cost
+            )
+            if not result["checks"][f"Net return estimate at least {objective:.1%}"]:
+                return
+            if not result["checks"][f"BIL at least {minimum_bil:.0%}"]:
+                return
+            if best is None or result["volatility"] < best["volatility"]:
+                best = result
+            return
+
+        for units_here in range(remaining + 1):
+            weight = units_here * step
+            if weight <= maximum_asset + 1e-9:
+                current[names[index]] = weight
+                try_allocations(index + 1, remaining - units_here, current)
+
+    try_allocations(0, units, {})
+    return best
+
+
 def estimate_from_monthly_prices(csv_input, last_36_months=False):
     """Estimate annualized returns, volatilities, and correlations from prices.
 
