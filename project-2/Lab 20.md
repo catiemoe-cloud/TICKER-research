@@ -45,6 +45,10 @@
 
 > **AI closed from this point until the prediction is committed and pushed.**At 2:09 PM on November 17, 2026, with AI off, I predict that if the Fallback latest spread (%) is increased above the median, there will be an error. The old value is 0.84%, and the median is 0.84%. I predict that the window stress moves an allocation by 25 points or more.
 
+### Test result — 2:24 PM
+
+I entered a Fallback latest spread of 0.87% and a Fallback trailing median of 0.86%. The app showed: “REVIEW LQD: the point-in-time corporate spread is above its trailing median. This flag triggers a committee review, not an automatic trade.” The result was a committee-review alert rather than a technical error or an automatic allocation change.
+
 ## Explain the code
 
 The decision-number function is `search_project2_mix()` in [portfolio.py](portfolio.py). It tries

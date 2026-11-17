@@ -47,21 +47,21 @@ Education, not investment advice.
 
 ### Before execution — student-authored prediction
 
-- Timestamp:
-- Repository commit hash before execution:
-- Exact input changed and units:
-- Old value:
-- New value:
-- Expected direction of return, volatility, and weights:
-- Expected effect on the pilot/reject/hold decision:
-- Why this is a load-bearing input:
+- Timestamp: November 17, 2026, 2:09 PM.
+- Repository commit evidence: `6292a2a` (prediction recorded in `Lab 20.md` and pushed after the reported 2:15 PM run).
+- Exact input changed and units: Fallback latest spread (%).
+- Old value: 0.84%.
+- New value: Increased above the 0.84% median; the exact entered value was not recorded.
+- Expected direction of return, volatility, and weights: I predicted that the window stress would move an allocation by 25 points or more.
+- Expected effect on the pilot/reject/hold decision: I predicted there would be an error if the fallback latest spread was increased above the median.
+- Why this is a load-bearing input: The corporate-spread input is the point-in-time credit-monitoring signal for LQD.
 
 ### After execution — complete after the committed run
 
-- Command/run used:
-- Before output location:
-- After output location:
-- Actual direction of return, volatility, and weights:
-- Actual decision effect:
-- Did the result match the prediction? Why or why not?
-- Failure diagnosis or explanation if nothing changed:
+- Command/run used: Streamlit Project 2 app, run at 2:24 PM on November 17, 2026.
+- Before output location: Project 2 Streamlit dashboard with fallback latest spread of 0.84% and fallback trailing median of 0.84%.
+- After output location: Project 2 Streamlit dashboard with fallback latest spread of 0.87% and fallback trailing median of 0.86%.
+- Actual direction of return, volatility, and weights: No return, volatility, or allocation change was recorded for this signal-only test.
+- Actual decision effect: The app displayed: “REVIEW LQD: the point-in-time corporate spread is above its trailing median. This flag triggers a committee review, not an automatic trade.”
+- Did the result match the prediction? Why or why not? Partly. The above-median spread produced a review alert, not a technical error; this test did not show a 25-point allocation movement from the window stress.
+- Failure diagnosis or explanation if nothing changed: The changed inputs are a credit-monitoring signal. They trigger review status but do not automatically recalculate or trade the portfolio allocation.
