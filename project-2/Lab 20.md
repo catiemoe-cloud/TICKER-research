@@ -12,12 +12,12 @@
 | Requirement | Current evidence | Status |
 |---|---|---|
 | Tool | `app.py` opens the Cautious Growth Portfolio dashboard. | Ready locally |
-| README | [README.md](README.md) includes setup and the one command to run the app. | Ready locally |
+| README | [README.md](README.md) includes setup and the one command to run the app. | Partner cold run passed |
 | Visible output | [outputs/visible_output.md](outputs/visible_output.md) shows the base allocation, stress results, and decision. | Ready locally |
 | Decision memo | [docs/decision-memo.md](docs/decision-memo.md) states the pilot recommendation, range, risks, and triggers. | Draft ready locally |
 | Validation and AI use | [docs/validation-and-ai-use.md](docs/validation-and-ai-use.md) records sources, checks, limitations, and the AI-use record. | Needs the AI-closed Changed-Input Record |
 | Videos and transcripts | Not recorded yet. | Not started |
-| GitHub | Current files must be pushed before the partner cold run. | Not complete |
+| GitHub | Current files are published in the Project 2 repository. | Complete |
 
 ## Current committee decision
 
@@ -34,14 +34,12 @@
 
 ### Partner cold-run record
 
-_Complete after my partner runs the repository from the GitHub README._
-
-- Command used:
-- First failure, or `no failure`:
-- Elapsed time:
-- Where the result appeared:
-- Fix made, or why no fix was needed:
-- Commit/push after fix (if applicable):
+- Command used: `python3 -m venv .venv`, `source .venv/bin/activate`, `pip install -r requirements.txt`, then `streamlit run app.py`.
+- First failure, or `no failure`: No failure.
+- Elapsed time: About one minute.
+- Where the result appeared: The Streamlit Project 2 dashboard in the browser, including the committee decision and portfolio comparison.
+- Fix made, or why no fix was needed: No fix was needed because the app ran successfully from the README instructions.
+- Commit/push after fix (if applicable): Not applicable; the clean cold run was completed from the GitHub repository.
 
 ## V — Locked Changed-Input Record
 
@@ -65,11 +63,9 @@ _Complete after explaining the function line by line without AI._
 
 ## E — fix one thing
 
-_Complete after the cold run._
-
-- First issue found:
-- Repair made:
-- Rerun result:
+- First issue found: No issue was found during the partner cold run.
+- Repair made: No repair was needed.
+- Rerun result: The partner completed a clean run from the README in about one minute.
 
 ## Decision line
 
@@ -77,10 +73,8 @@ _Complete after the cold run._
 
 ## Reflect
 
-_Complete after the cold run and changed-input test._
-
-1. What did the cold run find that I could not see?
-2. What will I not touch before the deadline?
+1. The cold run showed that the README gives a new user enough information to create the environment, install the requirements, and open the dashboard without needing help from me.
+2. Before the deadline, I will not change the stated mandate, decision rules, or the committed Changed-Input Record after I complete it; I will only make documented fixes if testing identifies a real problem.
 
 ## Checkout links
 
