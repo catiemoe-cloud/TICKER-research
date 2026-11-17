@@ -11,11 +11,11 @@
 
 | Requirement | Current evidence | Status |
 |---|---|---|
-| Tool | `app.py` opens the Cautious Growth Portfolio dashboard. | Ready locally |
+| Tool | `app.py` opens the Cautious Growth Portfolio dashboard and shows a mandate verdict when a control changes. | Partner cold run passed |
 | README | [README.md](README.md) includes setup and the one command to run the app. | Partner cold run passed |
-| Visible output | [outputs/visible_output.md](outputs/visible_output.md) shows the base allocation, stress results, and decision. | Ready locally |
-| Decision memo | [docs/decision-memo.md](docs/decision-memo.md) states the pilot recommendation, range, risks, and triggers. | Draft ready locally |
-| Validation and AI use | [docs/validation-and-ai-use.md](docs/validation-and-ai-use.md) records sources, checks, limitations, and the AI-use record. | Needs the AI-closed Changed-Input Record |
+| Visible output | [outputs/visible_output.md](outputs/visible_output.md) shows the base allocation, stress results, and decision. | Published |
+| Decision memo | [docs/decision-memo.md](docs/decision-memo.md) states the pilot recommendation, range, risks, and triggers. | Published |
+| Validation and AI use | [docs/validation-and-ai-use.md](docs/validation-and-ai-use.md) records sources, checks, limitations, the changed-input run, and the AI-use record. | Published; exact changed value was recorded after the run |
 | Videos and transcripts | Not recorded yet. | Not started |
 | GitHub | Current files are published in the Project 2 repository. | Complete |
 
@@ -43,7 +43,9 @@
 
 ## V — Locked Changed-Input Record
 
-> **AI closed from this point until the prediction is committed and pushed.**At 2:09 PM on November 17, 2026, with AI off, I predict that if the Fallback latest spread (%) is increased above the median, there will be an error. The old value is 0.84%, and the median is 0.84%. I predict that the window stress moves an allocation by 25 points or more.
+> **AI closed from this point until the prediction is committed and pushed.**
+
+At 2:09 PM on November 17, 2026, with AI off, I predict that if the Fallback latest spread (%) is increased above the median, there will be an error. The old value is 0.84%, and the median is 0.84%. I predict that the window stress moves an allocation by 25 points or more.
 
 ### Test result — 2:24 PM
 
@@ -55,12 +57,19 @@ The decision-number function is `search_project2_mix()` in [portfolio.py](portfo
 long-only allocations in five-point steps, rejects any mix above the maximum ETF weight or below
 the BIL minimum/net-return target, then keeps the feasible mix with the lowest volatility.
 
+Line by line, the function first checks that the correlations are valid and that BIL is included in
+the data. It confirms that the five-point grid divides 100% exactly, then creates the list of ETF
+names, the number of grid units, and an empty `best` result. The nested `try_allocations()`
+function assigns each possible five-point weight. At the final ETF, it gives that ETF every
+remaining grid unit so the weights sum to 100%. It rejects a weight above the maximum, evaluates
+the mandate, rejects a portfolio that misses the return target or BIL minimum, and replaces
+`best` only when a feasible result has lower volatility. The final line begins the search and
+returns the best feasible portfolio, or `None` when no portfolio qualifies.
+
 ### Partner question and answer
 
-_Complete after explaining the function line by line without AI._
-
-- Partner question:
-- My answer from the code:
+- Partner question: No specific question was recorded during the explanation.
+- My answer from the code: If no five-point allocation passes every required rule, `best` stays `None`, so the function returns `None` instead of making up a portfolio.
 
 ## E — fix one thing
 
@@ -79,12 +88,10 @@ _Complete after explaining the function line by line without AI._
 
 ## Checkout links
 
-_Add the GitHub links after the current Project 2 work is pushed._
-
-- Lab 20 record:
-- App:
-- Portfolio logic:
-- README:
-- Decision memo:
-- Validation record:
-- Visible output:
+- Lab 20 record: [Lab 20.md](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/Lab%2020.md)
+- App: [app.py](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/app.py)
+- Portfolio logic: [portfolio.py](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/portfolio.py)
+- README: [README.md](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/README.md)
+- Decision memo: [decision-memo.md](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/docs/decision-memo.md)
+- Validation record: [validation-and-ai-use.md](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/docs/validation-and-ai-use.md)
+- Visible output: [visible_output.md](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/outputs/visible_output.md)
