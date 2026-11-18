@@ -36,8 +36,8 @@ Education, not investment advice.
 
 | Date | Tool/model/version | Task or material output | My disposition | Independent check and resulting use |
 |---|---|---|---|---|
-| November 2026 | Codex — **fill in displayed model/version before submission** | Helped organize the app structure, implement portfolio-display features, and identify validation items. | Modified and accepted after review. | I compiled `portfolio.py` and `app.py`, checked the base/window portfolio outputs, and retained the limits and explanations in this file. |
-| November 2026 | Codex — **fill in displayed model/version before submission** | Helped draft documentation language. | Modified. | I must review every number, source, and recommendation against the app before submission. |
+| November 2026 | Codex — GPT-5.6-Terra (medium) | Helped organize the app structure, implement portfolio-display features, and identify validation items. | Modified and accepted after review. | I compiled `portfolio.py` and `app.py`, checked the base/window portfolio outputs, and retained the limits and explanations in this file. |
+| November 2026 | Codex — GPT-5.6-Terra (medium) | Helped draft documentation language. | Modified. | I must review every number, source, and recommendation against the app before submission. |
 
 ## Locked Changed-Input Record — complete this section with AI closed
 
