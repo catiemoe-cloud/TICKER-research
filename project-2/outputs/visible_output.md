@@ -10,6 +10,20 @@ Education, not investment advice.
 **Price-data boundary:** 59 monthly returns from November 2021 through September 2026.  
 **As-of rule:** The live app uses the selected ALFRED vintage for the `BAMLC0A0CM` credit monitor.
 
+## Point-in-time signal context
+
+| Input | Default executed value |
+|---|---:|
+| Signal as-of date | 2026-09-30 |
+| Input mode | Manual fallback; FRED/ALFRED download unchecked |
+| Fallback latest corporate spread | 0.84% |
+| Fallback trailing median | 0.84% |
+| LQD review status | No review flag; latest spread is at or below the trailing median |
+
+The signal is a committee-review input for LQD, not an automatic trade instruction. The base
+window stress moves ACWI by 25 points, so the app's operating action is committee review even
+though the tentative long-term recommendation remains a monitored pilot.
+
 ## Constrained portfolio
 
 | ETF | Weight |

@@ -8,7 +8,7 @@ Education, not investment advice.
 | Input | Source | Boundary / check |
 |---|---|---|
 | BIL, IEF, LQD, ACWI prices | Yahoo Finance monthly adjusted-close download in `prices.csv` | Downloaded October 22, 2026; input includes October 2021–September 2026 prices. Historical returns are estimates. |
-| Corporate-spread signal | [FRED BAMLC0A0CM](https://fred.stlouisfed.org/series/BAMLC0A0CM) and ALFRED vintage | Use only the ALFRED vintage available on the selected decision date; do not insert current FRED history into an earlier decision. |
+| Corporate-spread signal | [FRED BAMLC0A0CM](https://fred.stlouisfed.org/series/BAMLC0A0CM), sourced by FRED from Ice Data Indices, LLC, and ALFRED vintage | Daily percent series, not seasonally adjusted. The October 28, 2026 observation was updated October 29, indicating roughly next-business-day availability. FRED warns values can be revised; use only the ALFRED vintage available on the selected decision date. Download/vintage check: October 29, 2026. |
 | Portfolio calculations | `portfolio.py` | Return = arithmetic monthly mean × 12; volatility = sample monthly standard deviation × square root of 12; weights are searched in 5-point steps. |
 
 ## Checks completed
