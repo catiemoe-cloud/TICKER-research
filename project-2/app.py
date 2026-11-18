@@ -300,7 +300,57 @@ def visible_output_markdown(base_estimates, base_results, stress_rows, signal, a
 
 
 st.set_page_config(page_title="Project 2 — Cautious Growth Portfolio", layout="wide")
-st.title("Project 2 — Cautious Growth Portfolio")
+st.markdown(
+    """
+    <style>
+      :root {
+        --navy: #102a43;
+        --blue: #247ba0;
+        --teal: #2a9d8f;
+        --gold: #f4a261;
+        --mist: #f5f8fb;
+      }
+      .stApp { background: linear-gradient(180deg, #f7fafc 0%, #ffffff 32%); }
+      [data-testid="stSidebar"] { background: #102a43; }
+      [data-testid="stSidebar"] * { color: #f7fafc; }
+      [data-testid="stSidebar"] [data-baseweb="select"] * { color: #102a43; }
+      [data-testid="stSidebar"] input { color: #102a43 !important; }
+      .hero {
+        background: linear-gradient(120deg, #102a43, #247ba0);
+        border-radius: 18px;
+        color: white;
+        margin: 0.35rem 0 1.5rem;
+        padding: 1.8rem 2rem;
+        box-shadow: 0 10px 26px rgba(16, 42, 67, .16);
+      }
+      .hero h1 { color: white; font-size: 2.45rem; margin: 0; }
+      .hero p { color: #dbeafe; font-size: 1.06rem; margin: .55rem 0 0; }
+      .eyebrow { color: #7dd3fc; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; font-size: .75rem; }
+      .section-label { color: #247ba0; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .76rem; margin-bottom: -.55rem; }
+      [data-testid="stMetric"] {
+        background: white;
+        border: 1px solid #dbe7f0;
+        border-radius: 12px;
+        padding: .9rem;
+        box-shadow: 0 3px 10px rgba(16, 42, 67, .05);
+      }
+      h2, h3 { color: #102a43; }
+      [data-testid="stDataFrame"] { border: 1px solid #dbe7f0; border-radius: 10px; overflow: hidden; }
+      .small-note { color: #52606d; font-size: .9rem; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+st.markdown(
+    """
+    <div class="hero">
+      <div class="eyebrow">Investment committee dashboard</div>
+      <h1>Project 2 — Cautious Growth Portfolio</h1>
+      <p>A transparent, monitored portfolio recommendation built from the same historical inputs and mandate rules.</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 st.caption(
     "Built with AI help for coding, research organization, and debugging; the analysis and decision are mine. "
     "Education, not investment advice."
@@ -371,16 +421,18 @@ window_target = window_results["Constrained portfolio"]
 window_asset, window_move = largest_allocation_move(base_target, window_target)
 stress_review = abs(window_move) >= 0.25 - 1e-9
 
+st.markdown('<div class="section-label">01 · Committee recommendation</div>', unsafe_allow_html=True)
 st.subheader("Committee decision")
 decision, allocation, reversal = st.columns(3)
 decision.metric("Tentative committee recommendation", "PILOT")
 allocation.metric("Pilot allocation range", "BIL 55–65% · ACWI 35–45%")
 reversal.metric("Pause/reversal trigger", "25+ point stress move")
-st.write(
+st.info(
     "This is a monitored pilot, not a claim that the portfolio is permanently optimal. "
     "The committee should approve implementation only after reviewing the stress results, current drift, and credit monitor."
 )
 
+st.markdown('<div class="section-label">02 · Data boundary and credit signal</div>', unsafe_allow_html=True)
 st.subheader("Data boundary and signal governance")
 st.write(
     f"Price estimates use {base_estimates['months_used']} monthly returns from "
@@ -414,6 +466,8 @@ with st.expander("Signal data card and audit trail"):
             f"{signal['future_observations']}."
         )
 
+st.divider()
+st.markdown('<div class="section-label">03 · Baselines vs. recommendation</div>', unsafe_allow_html=True)
 st.subheader("Base-case portfolio comparison")
 st.dataframe(
     [portfolio_rows(result, label) for label, result in base_results.items()],
@@ -428,9 +482,69 @@ with right:
     st.markdown("#### Mandate verdicts")
     st.dataframe(checks_rows(base_results), hide_index=True, width="stretch")
 
+chart_left, chart_right = st.columns(2)
+with chart_left:
+    st.markdown("#### Net return estimates")
+    return_chart = [
+        {"Portfolio": label, "Net return (%)": round(result["net_return"] * 100, 2)}
+        for label, result in base_results.items()
+    ]
+    st.vega_lite_chart(
+        return_chart,
+        {
+            "mark": {"type": "bar", "cornerRadiusTopLeft": 6, "cornerRadiusTopRight": 6},
+            "encoding": {
+                "x": {"field": "Portfolio", "type": "nominal", "sort": None, "axis": {"labelAngle": 0}},
+                "y": {"field": "Net return (%)", "type": "quantitative", "title": "Annual net return (%)"},
+                "color": {
+                    "field": "Portfolio",
+                    "type": "nominal",
+                    "legend": None,
+                    "scale": {"range": ["#9ecae1", "#f4a261", "#2a9d8f"]},
+                },
+                "tooltip": [
+                    {"field": "Portfolio", "type": "nominal"},
+                    {"field": "Net return (%)", "type": "quantitative", "format": ".2f"},
+                ],
+            },
+            "height": 260,
+        },
+        width="stretch",
+    )
+with chart_right:
+    st.markdown("#### Constrained portfolio allocation")
+    allocation_chart = [
+        {"ETF": ticker, "Weight (%)": round(base_target["weights"][ticker] * 100, 1)}
+        for ticker in TICKERS
+    ]
+    st.vega_lite_chart(
+        allocation_chart,
+        {
+            "mark": {"type": "bar", "cornerRadiusEnd": 6},
+            "encoding": {
+                "y": {"field": "ETF", "type": "nominal", "sort": "-x", "title": None},
+                "x": {"field": "Weight (%)", "type": "quantitative", "title": "Portfolio weight (%)"},
+                "color": {
+                    "field": "ETF",
+                    "type": "nominal",
+                    "legend": None,
+                    "scale": {"range": ["#247ba0", "#70c1b3", "#f4a261", "#102a43"]},
+                },
+                "tooltip": [
+                    {"field": "ETF", "type": "nominal"},
+                    {"field": "Weight (%)", "type": "quantitative", "format": ".1f"},
+                ],
+            },
+            "height": 260,
+        },
+        width="stretch",
+    )
+
 st.markdown("#### Why the constrained portfolio differs from the baselines")
 st.dataframe(baseline_gap_rows(base_results), hide_index=True, width="stretch")
 
+st.divider()
+st.markdown('<div class="section-label">04 · Decision durability</div>', unsafe_allow_html=True)
 st.subheader("Required stress scenarios")
 stress_cases = {
     "Base case": (base_estimates, base_results, "All monthly returns; no cost drag"),
@@ -460,11 +574,45 @@ for name, (estimates, results, change) in stress_cases.items():
         }
     )
 st.dataframe(stress_rows, hide_index=True, width="stretch")
+stress_chart = [
+    {
+        "Scenario": row["Scenario"],
+        "Net return (%)": float(row["Net return estimate"].rstrip("%")),
+        "Volatility (%)": float(row["Volatility"].rstrip("%")),
+    }
+    for row in stress_rows
+    if "Net return estimate" in row
+]
+st.markdown("#### Stress comparison")
+st.vega_lite_chart(
+    stress_chart,
+    {
+        "mark": {"type": "bar", "cornerRadiusTopLeft": 5, "cornerRadiusTopRight": 5},
+        "encoding": {
+            "x": {"field": "Scenario", "type": "nominal", "sort": None, "axis": {"labelAngle": -20}},
+            "y": {"field": "Net return (%)", "type": "quantitative", "title": "Net return estimate (%)"},
+            "color": {
+                "field": "Scenario",
+                "type": "nominal",
+                "legend": None,
+                "scale": {"range": ["#247ba0", "#e76f51", "#f4a261", "#70c1b3", "#2a9d8f"]},
+            },
+            "tooltip": [
+                {"field": "Scenario", "type": "nominal"},
+                {"field": "Net return (%)", "type": "quantitative", "format": ".2f"},
+                {"field": "Volatility (%)", "type": "quantitative", "format": ".2f"},
+            ],
+        },
+        "height": 300,
+    },
+    width="stretch",
+)
 st.info(
     f"The window stress moves {window_asset} by {points(window_move)}. "
     + ("This reaches the 25-point committee-review trigger." if stress_review else "This stays below the 25-point committee-review trigger.")
 )
 
+st.markdown('<div class="section-label">05 · Original extension</div>', unsafe_allow_html=True)
 st.subheader("Allocation robustness map")
 robustness_rows = []
 for target in (0.055, 0.060, 0.065, 0.070):
@@ -487,6 +635,8 @@ for target in (0.055, 0.060, 0.065, 0.070):
 st.dataframe(robustness_rows, hide_index=True, width="stretch")
 st.caption("This map is an original extension: it shows whether the recommendation is stable across plausible return targets and data windows.")
 
+st.divider()
+st.markdown('<div class="section-label">06 · Operational next step</div>', unsafe_allow_html=True)
 st.subheader("Rebalancing action card")
 st.write("Enter the investor's current weights. The app compares them with the constrained target and gives a transparent operational recommendation.")
 current_columns = st.columns(4)
@@ -510,6 +660,8 @@ reason_column.metric("Largest current-vs-target drift", "not known" if rebalance
 turnover_column.metric("Estimated one-way turnover", "not known" if rebalance is None else percent(rebalance["turnover"]))
 st.write(action_reason)
 
+st.divider()
+st.markdown('<div class="section-label">07 · Explore the mandate</div>', unsafe_allow_html=True)
 st.subheader("Selected interactive view")
 st.write(
     f"Window: {selected_estimates['first_date']} to {selected_estimates['last_date']}; "
