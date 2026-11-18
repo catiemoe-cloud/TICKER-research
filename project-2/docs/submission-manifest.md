@@ -32,7 +32,7 @@
 - [ ] Complete a strict Locked Changed-Input Record with the exact old/new values committed before the run, if the current record is not accepted by the instructor.
 - [ ] Record and upload the three videos as Unlisted or Public YouTube videos; never Private.
 - [ ] Correct captions for finance terms, tickers, names, and material numbers.
-- [ ] Add `docs/transcript-video-1.txt`, `docs/transcript-video-2.txt`, and `docs/transcript-video-3.txt` after correcting the recordings.
+- [ ] Replace the draft `docs/transcript-video-1.txt`, `docs/transcript-video-2.txt`, and `docs/transcript-video-3.txt` files with corrected final transcripts after recording.
 - [ ] Replace every bracketed field in the video table and confirm all links while logged out.
 - [ ] Attach `decision-memo.md`, `validation-and-ai-use.md`, all three transcripts, and this manifest in Brightspace.
 

@@ -1,0 +1,18 @@
+DRAFT TRANSCRIPT — NOT YET RECORDED OR TIMESTAMPED
+Replace this draft with the corrected transcript from the final Video 3 recording before submission.
+
+[0:00] [The live Streamlit app is visible on screen.] I used Codex, GPT-5.6-Terra medium, for coding, research organization, debugging, and document drafting. The analysis and committee decision are mine. Education, not investment advice.
+
+[0:20] This live app supports my recommendation to pilot a cautious-growth portfolio, not to fully adopt it without monitoring. I am asking the committee to authorize a monitored pilot in the range of 55 to 65 percent BIL and 35 to 45 percent ACWI, reviewed quarterly.
+
+[0:50] The portfolio is intended for a cautious investor who still wants growth but needs substantial liquidity. The constrained base portfolio is 60 percent BIL and 40 percent ACWI. Its historical net return estimate is 6.69 percent and its annualized volatility is 6.03 percent.
+
+[1:25] I compare it against equal weight and a 60 percent ACWI and 40 percent LQD benchmark under the same mandate. The mandate requires a 6.5 percent historical net return estimate, at least 10 percent BIL, long-only positions, and no ETF above 70 percent.
+
+[2:00] The important risk is sensitivity to the data window. The latest-36-month stress moves ACWI from 40 percent to 15 percent, a 25-point change. That reaches my review trigger. The app also tests a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.
+
+[2:45] The corporate-spread monitor uses the point-in-time BAMLC0A0CM series. If the spread is above its trailing median, it flags LQD for committee review. It does not trade automatically.
+
+[3:20] The committee should pause or reverse the pilot if the latest-36-month window moves any allocation by 25 percentage points or more versus the all-history base window, if the portfolio misses the return target, or if the credit-monitoring process requires review.
+
+[4:00] My final ask is to approve only the monitored pilot and require the quarterly review process before any broader allocation.

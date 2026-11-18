@@ -1,0 +1,18 @@
+DRAFT TRANSCRIPT — NOT YET RECORDED OR TIMESTAMPED
+Replace this draft with the corrected transcript from the final Video 2 recording before submission.
+
+[0:00] I used Codex, GPT-5.6-Terra medium, for coding, research organization, debugging, and document drafting. The analysis and committee decision are mine. Education, not investment advice.
+
+[0:15] This is the technical walkthrough of my Cautious Growth Portfolio app. The main files are README.md, app.py, portfolio.py, prices.csv, the visible output file, and the decision memo and validation record in the docs folder.
+
+[0:40] A clean user follows the README commands to create the environment, install Streamlit, and run streamlit run app.py. My partner completed that cold run from the README in about one minute with no failure.
+
+[1:05] The prices.csv file contains monthly adjusted-close prices for BIL, IEF, LQD, and ACWI. Portfolio.py converts those prices to monthly returns, calculates annual return estimates, annualized volatility, and correlations. The app uses those same calculations for each portfolio comparison.
+
+[1:35] The decision-number function is search_project2_mix. It searches long-only allocations in five-point steps. It rejects weights above the 70 percent maximum, rejects allocations that miss the 6.5 percent return target or 10 percent BIL minimum, and keeps the feasible mix with the lowest volatility. If no mix qualifies, it returns None instead of inventing a portfolio.
+
+[2:20] The app compares equal weight, a 60 percent ACWI and 40 percent LQD benchmark, and the constrained portfolio. It shows the mandate checks, allocation and return charts, a point-in-time credit-monitoring card, and stresses for the return estimate, time window, cost, and BIL constraint.
+
+[3:00] The base constrained result is 60 percent BIL and 40 percent ACWI. For the credit-monitoring test, I used a fallback latest spread of 0.87 percent and a fallback trailing median of 0.86 percent. The app displayed an LQD committee-review message. It did not automatically change portfolio weights because the credit signal is a monitoring input, not an automatic trading rule.
+
+[3:50] A main limitation is that historical return estimates are not forecasts, and the five-point allocation grid can miss a better allocation between the tested points. The validation record documents sources, tests, limitations, and the changed-input evidence.

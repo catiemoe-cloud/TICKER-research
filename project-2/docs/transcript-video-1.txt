@@ -1,0 +1,18 @@
+DRAFT TRANSCRIPT — NOT YET RECORDED OR TIMESTAMPED
+Replace this draft with the corrected transcript from the final Video 1 recording before submission.
+
+[0:00] I used Codex, GPT-5.6-Terra medium, for coding, research organization, debugging, and document drafting. The analysis and committee decision are mine. Education, not investment advice.
+
+[0:15] My Project 2 system is a cautious-growth portfolio process using BIL, IEF, LQD, and ACWI. At first, I focused on finding one lowest-volatility allocation that reached the 6.5 percent historical return target. Building the app changed how I thought about that answer.
+
+[0:35] The base-case result is 60 percent BIL and 40 percent ACWI, with a 6.69 percent historical net return estimate and 6.03 percent annualized volatility. But I do not treat that as a permanent recommendation.
+
+[0:55] The last-36-month stress changed the mix to 70 percent BIL, 15 percent IEF, and 15 percent ACWI. ACWI moved by 25 percentage points from the base case, which reaches my committee-review trigger.
+
+[1:20] Because of that sensitivity, I changed my recommendation from treating one output as the answer to recommending a monitored pilot with a 55 to 65 percent BIL range and a 35 to 45 percent ACWI range.
+
+[1:40] One AI-assisted part I checked was the portfolio-display and mandate-check structure. I did not accept a recommendation just because AI helped organize the app. I checked the results in portfolio.py, compared equal weight and the 60 percent ACWI and 40 percent LQD benchmark against the same mandate, and verified the base case and required stress tests in the app and validation record.
+
+[2:15] [Replace this sentence with one specific AI output you personally checked, plus whether you accepted, modified, or rejected it and why.]
+
+[2:35] The biggest change in my thinking was that a portfolio screen is only helpful if it also shows when its answer is unstable. My process does not promise future returns. It gives the committee a transparent pilot, stress results, and conditions for review or reversal.
