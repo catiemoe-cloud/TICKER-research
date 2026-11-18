@@ -9,7 +9,7 @@ Replace this draft with the corrected transcript from the final Video 1 recordin
 
 [0:55] The last-36-month stress changed the mix to 70 percent BIL, 15 percent IEF, and 15 percent ACWI. ACWI moved by 25 percentage points from the base case, which reaches my committee-review trigger.
 
-[1:20] Because of that sensitivity, I changed my recommendation from treating one output as the answer to recommending a monitored pilot with a 55 to 65 percent BIL range and a 35 to 45 percent ACWI range.
+[1:20] Because of that sensitivity, I changed my recommendation from treating one output as the answer to recommending a monitored pilot with a 55 to 65 percent BIL range and a 35 to 45 percent ACWI range. I also added a robustness map so the committee can see whether the allocation changes across return targets and time windows instead of seeing only one result.
 
 [1:40] One AI-assisted part I checked was the portfolio-display and mandate-check structure. I did not accept a recommendation just because AI helped organize the app. I checked the results in portfolio.py, compared equal weight and the 60 percent ACWI and 40 percent LQD benchmark against the same mandate, and verified the base case and required stress tests in the app and validation record.
 

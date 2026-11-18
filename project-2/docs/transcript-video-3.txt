@@ -11,8 +11,10 @@ Replace this draft with the corrected transcript from the final Video 3 recordin
 
 [2:00] The important risk is sensitivity to the data window. The latest-36-month stress moves ACWI from 40 percent to 15 percent, a 25-point change. That reaches my review trigger. The app also tests a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.
 
-[2:45] The corporate-spread monitor uses the point-in-time BAMLC0A0CM series. If the spread is above its trailing median, it flags LQD for committee review. It does not trade automatically.
+[2:45] I added a robustness map so the committee can see whether the portfolio remains feasible across different return targets and time windows. I also added a rebalancing action card and baseline-gap explanation, so the dashboard turns the calculations into a hold, rebalance, or committee-review conversation.
 
-[3:20] The committee should pause or reverse the pilot if the latest-36-month window moves any allocation by 25 percentage points or more versus the all-history base window, if the portfolio misses the return target, or if the credit-monitoring process requires review.
+[3:15] The corporate-spread monitor uses the point-in-time BAMLC0A0CM series. If the spread is above its trailing median, it flags LQD for committee review. It does not trade automatically.
 
-[4:00] My final ask is to approve only the monitored pilot and require the quarterly review process before any broader allocation.
+[3:45] The committee should pause or reverse the pilot if the latest-36-month window moves any allocation by 25 percentage points or more versus the all-history base window, if the portfolio misses the return target, or if the credit-monitoring process requires review.
+
+[4:20] My final ask is to approve only the monitored pilot and require the quarterly review process before any broader allocation.

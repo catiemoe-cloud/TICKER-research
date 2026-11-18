@@ -29,7 +29,9 @@ Show the comparison table, the allocation/return charts, the stress table, and t
 
 “The app compares equal weight, the 60% ACWI / 40% LQD benchmark, and the constrained portfolio. It also displays which mandate rules pass or fail. The base constrained result is 60% BIL and 40% ACWI. The required stresses change the return estimate, time window, cost, and BIL constraint.”
 
-“For the credit-monitoring test, I changed the fallback latest spread from 0.84% to 0.87% and the trailing median to 0.86%. The app correctly displayed an LQD committee-review message. This is intentionally not an automatic trade rule, so it did not automatically change the portfolio weights.”
+“Beyond the required comparison, I added a baseline-gap table that explains the return, volatility, BIL, and failed-rule differences between the recommended portfolio and each baseline. I also added an allocation robustness map across return targets and estimation windows.”
+
+“For implementation, the rebalancing action card compares current weights with the constrained target. It returns hold, rebalance, or committee review rather than pretending the app can trade automatically. For the credit-monitoring test, I changed the fallback latest spread from 0.84% to 0.87% and the trailing median to 0.86%. The app correctly displayed an LQD committee-review message. This is intentionally not an automatic trade rule, so it did not automatically change the portfolio weights.”
 
 ## Limitation and closing — 4:05–5:00
 

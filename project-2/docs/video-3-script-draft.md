@@ -33,6 +33,8 @@ Show the stress section and signal card.
 
 “The important risk is sensitivity to the data window. The latest-36-month stress moves ACWI from 40% to 15%, a 25-point change. That reaches my review trigger. I also test a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.”
 
+“I added a robustness map so the committee can see whether the portfolio remains feasible across different return targets and time windows. I also added a rebalancing action card and baseline-gap explanation, so the dashboard turns the calculations into a hold, rebalance, or committee-review conversation.”
+
 “The corporate-spread monitor uses the point-in-time `BAMLC0A0CM` series. If the spread is above its trailing median, it flags LQD for committee review. It does not trade automatically.”
 
 ## Conditions and close — 3:45–5:00

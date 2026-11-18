@@ -13,7 +13,7 @@
 
 “At first, I was focused on finding one lowest-volatility allocation that reached the 6.5% historical return target. Building the app changed how I thought about that answer. The base-case result is 60% BIL and 40% ACWI, with a 6.69% net return estimate and 6.03% annualized volatility, but it is not automatically a permanent recommendation.”
 
-“The last-36-month stress changed the mix to 70% BIL, 15% IEF, and 15% ACWI. That moves ACWI by 25 points from the base case, which reaches my committee-review trigger. Because of that sensitivity, I changed my recommendation from treating one output as the answer to recommending a monitored pilot with a 55–65% BIL and 35–45% ACWI range.”
+“The last-36-month stress changed the mix to 70% BIL, 15% IEF, and 15% ACWI. That moves ACWI by 25 points from the base case, which reaches my committee-review trigger. Because of that sensitivity, I changed my recommendation from treating one output as the answer to recommending a monitored pilot with a 55–65% BIL and 35–45% ACWI range. I also added a robustness map so the committee can see whether the allocation changes across return targets and time windows instead of seeing only one result.”
 
 ## One AI output I checked — 1:25–2:20
 
