@@ -7,8 +7,9 @@ Education, not investment advice.
 
 This project recommends a **monitored pilot**, not immediate full adoption. The pilot range is
 55–65% BIL and 35–45% ACWI. The process pauses for committee review if a data-window stress
-moves a recommended allocation by 25 percentage points or more, if the portfolio misses the net
-return target, or if the point-in-time corporate-spread monitor flags LQD.
+moves a recommended allocation by 25 percentage points or more when the latest 36 monthly returns
+are compared with the all-history base window, if the portfolio misses the net return target, or
+if the point-in-time corporate-spread monitor flags LQD.
 
 The intended user is a cautious investor who still wants growth but needs substantial liquidity.
 The app compares three portfolios under the same mandate:
@@ -75,6 +76,14 @@ and exactly four ticker columns: `BIL`, `IEF`, `LQD`, and `ACWI`.
 - `docs/video-*-script-draft.md` — recording outlines; final corrected transcripts are added after recording.
 - `outputs/visible_output.md` — current readable executed-output artifact.
 - `PROJECT2_PLAN.md` — complete build and submission timeline.
+
+## Final-project file boundary
+
+The final Project 2 system is `app.py`, `portfolio.py`, `prices.csv`, `README.md`, the `docs/`
+records, and `outputs/visible_output.md`. The Lab 14–19 files, investor-screening skills, and
+`reports/` folder are retained course artifacts; the final app does not import or depend on them.
+This separation lets a reviewer focus on the submitted portfolio process without treating prior
+lab prototypes as current app logic.
 
 ## Known limitations
 

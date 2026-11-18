@@ -426,7 +426,7 @@ st.subheader("Committee decision")
 decision, allocation, reversal = st.columns(3)
 decision.metric("Tentative committee recommendation", "PILOT")
 allocation.metric("Pilot allocation range", "BIL 55–65% · ACWI 35–45%")
-reversal.metric("Pause/reversal trigger", "25+ point stress move")
+reversal.metric("Pause/reversal trigger", "25+ point 36-month stress move")
 st.info(
     "This is a monitored pilot, not a claim that the portfolio is permanently optimal. "
     "The committee should approve implementation only after reviewing the stress results, current drift, and credit monitor."

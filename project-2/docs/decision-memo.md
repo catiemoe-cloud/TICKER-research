@@ -37,9 +37,10 @@ suitability.
 
 - Review the portfolio quarterly and rebalance if an allocation moves outside its 5-point band.
 - Review LQD if the point-in-time `BAMLC0A0CM` credit spread is above its trailing 12-month median.
-- Pause or reverse the pilot if a stress run moves any recommended allocation by 25 points or more,
-  the portfolio no longer reaches the net-return target, or the signal-data process cannot confirm
-  that a value was available on the decision date.
+- Pause or reverse the pilot if the latest-36-month window moves any recommended allocation by
+  25 percentage points or more versus the all-history base window, if the portfolio no longer
+  reaches the net-return target, or if the signal-data process cannot confirm that a value was
+  available on the decision date.
 
 ## AI disclosure and validation
 
