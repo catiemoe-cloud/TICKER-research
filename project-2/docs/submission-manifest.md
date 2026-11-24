@@ -24,7 +24,7 @@
 |---|---|---|---|---|---|
 | Video 1 | [YouTube video](https://youtu.be/-GlGElwO-AY) / [corrected transcript](https://github.com/catiemoe-cloud/TICKER-research/blob/main/project-2/docs/transcript-video-1.txt) | [ADD TITLE] | 2:29 | System/thinking change; one AI output checked | [YES/NO] |
 | Video 2 | [ADD UNLISTED OR PUBLIC YOUTUBE URL] / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 5:00] | Architecture, data flow, validation, limitation | [YES/NO] |
-| Video 3 | [ADD UNLISTED OR PUBLIC YOUTUBE URL] / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 5:00] | Live app opening; committee ask; reversal trigger | [YES/NO] |
+| Video 3 | [YouTube video](https://youtu.be/PL303YY0BFA) / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 5:00] | Live app opening; committee ask; reversal trigger | [YES/NO] |
 
 ## Frozen-package checklist
 
