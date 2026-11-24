@@ -66,3 +66,18 @@ Education, not investment advice.
 - Actual decision effect: The app displayed: “REVIEW LQD: the point-in-time corporate spread is above its trailing median. This flag triggers a committee review, not an automatic trade.”
 - Did the result match the prediction? Why or why not? Partly. The above-median spread produced a review alert, not a technical error; this test did not show a 25-point allocation movement from the window stress.
 - Failure diagnosis or explanation if nothing changed: The changed inputs are a credit-monitoring signal. They trigger review status but do not automatically recalculate or trade the portfolio allocation.
+
+## Corrected Locked Changed-Input Record
+
+### Before execution — student-authored prediction
+
+- Timestamp: 9:22 PM, November 23, 2026
+- Starting repository commit: `ac13744161efc5391c41c662375cc6561c92303e`
+- Exact input changed and units: Estimation window under Selected stress view, measured in monthly return observations. Kept the annual portfolio cost at 0 basis points.
+- Old value: All 59 monthly returns, November 2021 through September 2026.
+- New value: Latest 36 monthly returns, October 2023 through September 2026.
+- Expected numeric change in return: The constrained portfolio’s estimated annual net return falls from 6.69% to 6.59%, a decrease of 0.10 percentage points.
+- Expected numeric change in volatility: Estimated annualized volatility falls from 6.03% to 2.44%, a decrease of 3.59 percentage points.
+- Expected numeric change in weights: BIL rises from 60% to 70% (+10 percentage points), IEF rises from 0% to 15% (+15 points), LQD stays at 0%, and ACWI falls from 40% to 15% (−25 points).
+- Expected pilot/review/reject decision effect: Committee Review. The stressed portfolio still passes the 6.50% net return requirement, and the 25-point drop in ACWI hits the app’s review trigger.
+- Why this is the highest-risk input: Chose the estimation window because it changes the historical data used to estimate both returns and risk. In the displayed stress tests, it produces the largest allocation shift. The estimated return changes by only 0.10 percentage points, while the recommended equity weight drops from 40% to 15%. That makes the pilot allocation sensitive to which months the model uses.
