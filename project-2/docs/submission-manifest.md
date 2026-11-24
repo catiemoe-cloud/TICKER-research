@@ -22,7 +22,7 @@
 
 | Item | YouTube URL / GitHub transcript URL | Title | Duration | Required evidence timestamp(s) | Access checked while logged out? |
 |---|---|---|---|---|---|
-| Video 1 | [ADD UNLISTED OR PUBLIC YOUTUBE URL] / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 3:00] | System/thinking change; one AI output checked | [YES/NO] |
+| Video 1 | [YouTube video](https://youtu.be/-GlGElwO-AY) / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 3:00] | System/thinking change; one AI output checked | [YES/NO] |
 | Video 2 | [ADD UNLISTED OR PUBLIC YOUTUBE URL] / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 5:00] | Architecture, data flow, validation, limitation | [YES/NO] |
 | Video 3 | [ADD UNLISTED OR PUBLIC YOUTUBE URL] / [ADD TRANSCRIPT LINK] | [ADD TITLE] | [ADD duration, max 5:00] | Live app opening; committee ask; reversal trigger | [YES/NO] |
 
