@@ -38,11 +38,11 @@ The visible-output file, memo, validation record, scripts, and transcripts use t
 | Time | Show on screen | Say |
 |---|---|---|
 | 0:00–0:15 | Webcam plus app title/committee decision | Required AI and education statements. |
-| 0:15–0:45 | Base-case comparison and allocation chart | Base 60% BIL / 40% ACWI, 6.69% net return, 6.03% volatility. |
-| 0:45–1:20 | Required stress scenarios | Point to Window stress: 70% BIL, 15% IEF, 0% LQD, 15% ACWI; ACWI moves from 40% to 15%. |
-| 1:20–1:40 | Allocation robustness map | Explain that it shows how return targets and windows change feasibility/weights. |
-| 1:40–2:25 | `portfolio.py` and validation record | Show the 70% maximum-ETF boundary check: 70% BIL passes; 75% fails. Explain that the tolerance corrected floating-point noise without changing the mandate. |
-| 2:25–3:00 | Committee decision panel | Close with the monitored-pilot conclusion and the review/reversal condition. |
+| 0:15–0:55 | Base-case comparison and allocation chart | Base 60% BIL / 40% ACWI, 6.69% net return, 6.03% volatility. |
+| 0:55–1:20 | Required stress scenarios | Point to Window stress: 70% BIL, 15% IEF, 0% LQD, 15% ACWI; ACWI moves from 40% to 15%. |
+| 1:20–1:45 | Allocation robustness map | Explain that it shows how return targets and windows change feasibility/weights. |
+| 1:45–2:15 | `portfolio.py` and validation record | Show the 70% maximum-ETF boundary check: 70% BIL passes; 75% fails. Explain that the tolerance corrected floating-point noise without changing the mandate. |
+| 2:15–3:00 | Validation record and Committee decision panel | State that the committed window prediction matched; close with the monitored-pilot conclusion and review/reversal condition. |
 
 The Video 1 draft now includes the verified 70%-versus-75% boundary check as the AI-output check.
 
@@ -57,11 +57,11 @@ The Video 1 draft now includes the verified 70%-versus-75% boundary check as the
 | 0:15–1:20 | README, `prices.csv`, app/portfolio files | Explain the cold-start command and the price-to-return-to-portfolio data flow. |
 | 1:20–2:20 | `search_project2_mix()` in `portfolio.py` | Explain the five-point search, 70% maximum, 10% BIL minimum, 6.5% target, lowest-volatility selection, and `None` for no feasible mix. |
 | 2:20–3:20 | Live app comparison, mandate checks, baseline-gap table, and robustness map | Explain equal weight, 60/40 benchmark, constrained portfolio, and the original extensions. |
-| 3:20–4:05 | Sidebar: switch Estimation window to **Last 36 monthly returns**; show Selected interactive view and Required stress scenarios | Read the exact high-risk result: 70% BIL, 15% IEF, 0% LQD, 15% ACWI; 6.59% net return; 2.44% volatility; ACWI down 25 points. |
-| 4:05–4:30 | Sidebar: keep FRED/ALFRED unchecked; set fallback latest spread to **0.87** and fallback trailing median to **0.86** | Show the LQD committee-review warning and explain it is not an automatic trade. |
-| 4:30–5:00 | Method and limitations expander / validation record | State the historical-estimate and five-point-grid limitations. |
+| 3:20–4:25 | Sidebar: switch Estimation window to **Last 36 monthly returns**; show Selected interactive view and Required stress scenarios | State that you committed the AI-off prediction first. Read the exact result: 70% BIL, 15% IEF, 0% LQD, 15% ACWI; 6.59% net return; 2.44% volatility; ACWI down 25 points. |
+| 4:25–4:45 | Sidebar: keep FRED/ALFRED unchecked; set fallback latest spread to **0.87** and fallback trailing median to **0.86** | Show the LQD committee-review warning and explain it is not an automatic trade. |
+| 4:45–5:00 | Method and limitations expander / validation record | State the historical-estimate and five-point-grid limitations. |
 
-The 36-month window result is a valid high-risk stress demonstration. It is separate from the strict Locked Changed-Input Record requirement in the validation file.
+The 36-month window result is the completed Locked Changed-Input Record in the validation file. The prediction was committed before the run; the record documents the matching result and locations of the before/after outputs.
 
 ## Video 3 — committee presentation
 

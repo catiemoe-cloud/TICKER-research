@@ -1,18 +1,18 @@
-DRAFT TRANSCRIPT — NOT YET RECORDED OR TIMESTAMPED
-Replace this draft with the corrected transcript from the final Video 1 recording before submission.
+VIDEO-READY RECORDING TRANSCRIPT
+Use this while recording. After recording, replace the timing labels with the corrected timestamps and verify that every spoken word matches the final video.
 
 [0:00] I used Codex, GPT-5.6-Terra medium, for coding, research organization, debugging, and document drafting. The analysis and committee decision are mine. Education, not investment advice.
 
-[0:15] My Project 2 system is a cautious-growth portfolio process using BIL, IEF, LQD, and ACWI. At first, I focused on finding one lowest-volatility allocation that reached the 6.5 percent historical return target. Building the app changed how I thought about that answer.
+[0:15] My Project 2 system is a cautious-growth portfolio process using BIL, IEF, LQD, and ACWI. At first, I focused on one lowest-volatility allocation that reached the 6.5 percent historical return target.
 
-[0:35] The base-case result is 60 percent BIL and 40 percent ACWI, with a 6.69 percent historical net return estimate and 6.03 percent annualized volatility. But I do not treat that as a permanent recommendation.
+[0:35] The base case is 60 percent BIL and 40 percent ACWI, with a 6.69 percent net return estimate and 6.03 percent annualized volatility. I do not treat that as a permanent answer.
 
-[0:55] The last-36-month stress changed the mix to 70 percent BIL, 15 percent IEF, and 15 percent ACWI. ACWI moved by 25 percentage points from the base case, which reaches my committee-review trigger.
+[0:55] The last-36-month stress changed the mix to 70 percent BIL, 15 percent IEF, zero percent LQD, and 15 percent ACWI. ACWI moved by 25 points, reaching my review trigger.
 
-[1:20] Because of that sensitivity, I changed my recommendation from treating one output as the answer to recommending a monitored pilot with a 55 to 65 percent BIL range and a 35 to 45 percent ACWI range. I also added a robustness map so the committee can see whether the allocation changes across return targets and time windows instead of seeing only one result.
+[1:20] That sensitivity changed my recommendation to a monitored pilot with a 55 to 65 percent BIL range and a 35 to 45 percent ACWI range. I added a robustness map so the committee can see whether weights change across return targets and time windows.
 
-[1:40] One AI-assisted part I checked was the portfolio-display and mandate-check structure. I did not accept a recommendation just because AI helped organize the app. I checked the results in portfolio.py, compared equal weight and the 60 percent ACWI and 40 percent LQD benchmark against the same mandate, and verified the base case and required stress tests in the app and validation record.
+[1:45] One AI-assisted output I checked was the boundary-condition correction for the 70 percent maximum ETF limit. A floating-point representation had treated exactly 70 percent BIL as slightly above the limit. I ran the calculation: 70 percent now passes, while 75 percent still fails. I accepted that correction because it follows the mandate instead of changing the mandate to fit a result.
 
-[2:15] One specific AI-assisted output I checked was the boundary-condition correction for the 70 percent maximum ETF limit. A floating-point representation had treated an exactly 70 percent BIL result as slightly above the limit. I checked the rule by running the calculation: 70 percent BIL now passes the 70 percent maximum, while 75 percent BIL still fails it. I accepted that correction because it follows the stated mandate rather than changing the mandate to fit a result.
+[2:15] I also made a locked changed-input prediction before running the window test and committed it to GitHub. The result matched: net return fell from 6.69 percent to 6.59 percent, volatility fell from 6.03 percent to 2.44 percent, and ACWI fell from 40 percent to 15 percent.
 
-[2:35] The biggest change in my thinking was that a portfolio screen is only helpful if it also shows when its answer is unstable. My process does not promise future returns. It gives the committee a transparent pilot, stress results, and conditions for review or reversal.
+[2:45] The biggest change in my thinking was that a portfolio screen is useful only if it shows when its answer is unstable. My process gives the committee a transparent pilot, stress results, and conditions for review or reversal.

@@ -1,5 +1,5 @@
-DRAFT TRANSCRIPT — NOT YET RECORDED OR TIMESTAMPED
-Replace this draft with the corrected transcript from the final Video 3 recording before submission.
+VIDEO-READY RECORDING TRANSCRIPT
+Use this while recording. After recording, replace the timing labels with the corrected timestamps and verify that every spoken word matches the final video.
 
 [0:00] [The live Streamlit app is visible on screen.] I used Codex, GPT-5.6-Terra medium, for coding, research organization, debugging, and document drafting. The analysis and committee decision are mine. Education, not investment advice.
 
@@ -9,7 +9,7 @@ Replace this draft with the corrected transcript from the final Video 3 recordin
 
 [1:25] I compare it against equal weight and a 60 percent ACWI and 40 percent LQD benchmark under the same mandate. The mandate requires a 6.5 percent historical net return estimate, at least 10 percent BIL, long-only positions, and no ETF above 70 percent.
 
-[2:00] The important risk is sensitivity to the data window. The latest-36-month stress moves ACWI from 40 percent to 15 percent, a 25-point change. That reaches my review trigger. The app also tests a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.
+[2:00] The important risk is sensitivity to the data window. I wrote and committed a numeric prediction before changing the selected view from all 59 monthly returns to the latest 36 monthly returns. The result matched: net return fell from 6.69 percent to 6.59 percent, volatility fell from 6.03 percent to 2.44 percent, and ACWI moved from 40 percent to 15 percent, a 25-point change. That reaches my review trigger. The app also tests a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.
 
 [2:45] I added a robustness map so the committee can see whether the portfolio remains feasible across different return targets and time windows. I also added a rebalancing action card and baseline-gap explanation, so the dashboard turns the calculations into a hold, rebalance, or committee-review conversation.
 

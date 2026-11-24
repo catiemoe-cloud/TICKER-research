@@ -32,7 +32,7 @@ Point to the base-case table and charts.
 
 Show the stress section and signal card.
 
-“The important risk is sensitivity to the data window. The latest-36-month stress moves ACWI from 40% to 15%, a 25-point change. That reaches my review trigger. I also test a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.”
+“The important risk is sensitivity to the data window. I wrote and committed a numeric prediction before changing the selected view from all 59 monthly returns to the latest 36 monthly returns. The result matched: net return fell from 6.69% to 6.59%, volatility fell from 6.03% to 2.44%, and ACWI moved from 40% to 15%, a 25-point change. That reaches my review trigger. I also test a lower ACWI estimate, a 50-basis-point cost, and a tighter BIL minimum.”
 
 “I added a robustness map so the committee can see whether the portfolio remains feasible across different return targets and time windows. I also added a rebalancing action card and baseline-gap explanation, so the dashboard turns the calculations into a hold, rebalance, or committee-review conversation.”
 

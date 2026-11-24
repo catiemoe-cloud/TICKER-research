@@ -1,5 +1,5 @@
-DRAFT TRANSCRIPT — NOT YET RECORDED OR TIMESTAMPED
-Replace this draft with the corrected transcript from the final Video 2 recording before submission.
+VIDEO-READY RECORDING TRANSCRIPT
+Use this while recording. After recording, replace the timing labels with the corrected timestamps and verify that every spoken word matches the final video.
 
 [0:00] I used Codex, GPT-5.6-Terra medium, for coding, research organization, debugging, and document drafting. The analysis and committee decision are mine. Education, not investment advice.
 
@@ -15,8 +15,10 @@ Replace this draft with the corrected transcript from the final Video 2 recordin
 
 [2:45] Beyond the required comparison, I added a baseline-gap table that explains return, volatility, BIL, and failed-rule differences between the recommended portfolio and each baseline. I also added a robustness map across return targets and estimation windows. The rebalancing action card compares current weights with the constrained target and returns hold, rebalance, or committee review.
 
-[3:20] My highest-risk financial test is the estimation-window stress. When I use the latest 36 monthly returns instead of the all-history base window, the constrained mix changes to 70 percent BIL, 15 percent IEF, 0 percent LQD, and 15 percent ACWI. Its net return estimate is 6.59 percent and volatility is 2.44 percent. ACWI moves from 40 percent to 15 percent, a 25-point move that reaches the committee-review trigger.
+[3:20] My highest-risk financial test is the estimation-window stress. Before running it, I wrote an AI-off numeric prediction and committed it to GitHub. I changed the Selected stress view from all 59 monthly returns to the latest 36 monthly returns, while keeping annual cost at zero basis points.
 
-[4:05] As a separate signal-governance check, I used a fallback latest spread of 0.87 percent and a fallback trailing median of 0.86 percent. The app displayed an LQD committee-review message. It did not automatically change portfolio weights because the credit signal is a monitoring input, not an automatic trading rule.
+[3:45] The constrained mix changed to 70 percent BIL, 15 percent IEF, 0 percent LQD, and 15 percent ACWI. Its net return estimate fell from 6.69 percent to 6.59 percent and its volatility fell from 6.03 percent to 2.44 percent. ACWI moved from 40 percent to 15 percent, a 25-point move that reaches the committee-review trigger. The portfolio still passed the 6.50 percent net-return requirement, the Action today card remained Committee Review, and the tentative recommendation remained Pilot.
 
-[4:30] A main limitation is that historical return estimates are not forecasts, and the five-point allocation grid can miss a better allocation between the tested points. The validation record documents sources, tests, limitations, and the changed-input evidence.
+[4:25] As a separate signal-governance check, I used a fallback latest spread of 0.87 percent and a fallback trailing median of 0.86 percent. The app displayed an LQD committee-review message. It did not automatically change portfolio weights because the credit signal is a monitoring input, not an automatic trading rule.
+
+[4:45] A main limitation is that historical return estimates are not forecasts, and the five-point allocation grid can miss a better allocation between the tested points. The validation record documents sources, tests, limitations, and the completed changed-input evidence.

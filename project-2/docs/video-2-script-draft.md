@@ -32,7 +32,9 @@ Show the comparison table, the allocation/return charts, the stress table, and t
 
 “Beyond the required comparison, I added a baseline-gap table that explains the return, volatility, BIL, and failed-rule differences between the recommended portfolio and each baseline. I also added an allocation robustness map across return targets and estimation windows.”
 
-“My highest-risk financial test is the estimation-window stress. When I use the latest 36 monthly returns instead of the all-history base window, the constrained mix changes to 70% BIL, 15% IEF, 0% LQD, and 15% ACWI. Its net return estimate is 6.59% and volatility is 2.44%. ACWI moves from 40% to 15%, which is a 25-point move and reaches the committee-review trigger.”
+“My highest-risk financial test is the estimation-window stress. Before running it, I wrote an AI-off numeric prediction and committed it to GitHub. I changed the Selected stress view from all 59 monthly returns to the latest 36 monthly returns, while keeping annual cost at zero basis points.”
+
+“The constrained mix changed to 70% BIL, 15% IEF, 0% LQD, and 15% ACWI. Its net return estimate fell from 6.69% to 6.59% and volatility fell from 6.03% to 2.44%. ACWI moved from 40% to 15%, a 25-point move that reaches the committee-review trigger. The portfolio still passed the 6.50% net-return requirement, the Action today card remained Committee Review, and the tentative recommendation remained Pilot.”
 
 “For implementation, the rebalancing action card compares current weights with the constrained target. It returns hold, rebalance, or committee review rather than pretending the app can trade automatically. As a separate signal-governance check, entering a fallback latest spread of 0.87% against a 0.86% trailing median displays an LQD committee-review message. This is intentionally not an automatic trade rule, so it does not automatically change portfolio weights.”
 
