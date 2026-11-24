@@ -1,6 +1,7 @@
 # Video 1 Script Draft — System Change and AI Check
 
 **Maximum length:** 3:00
+**Webcam:** Keep your face visible in a small frame throughout the recording.
 **Before recording:** Replace every bracketed note with your own truthful wording. This is a recording outline, not a transcript.
 
 ## Opening — 0:00–0:15

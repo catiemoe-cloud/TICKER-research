@@ -22,6 +22,7 @@ Education, not investment advice.
 | Window stress | Latest 36 monthly returns change the mix to 70% BIL / 15% IEF / 15% ACWI. | App stress table |
 | Cost stress | The app applies a 50-basis-point annual portfolio cost drag. | App stress table |
 | Constraint stress | The app increases the BIL minimum from 10% to 20%. | App stress table |
+| Boundary-condition check | A 70.00% BIL result passes the “no ETF above 70%” limit; tolerance prevents a floating-point representation of 70% from becoming a false failure. | `portfolio.py`, 36-month window result |
 | Point-in-time monitor | App requests the selected ALFRED vintage and displays source/date/fallback status. | `app.py`; inspect live app output before submission |
 | Partner cold run | A partner followed the GitHub README without coaching; the app opened with no failure in about one minute. | `Lab 20.md` |
 

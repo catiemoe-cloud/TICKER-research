@@ -1,6 +1,7 @@
 # Video 2 Script Draft — Technical Walkthrough
 
 **Maximum length:** 5:00
+**Webcam:** Keep your face visible in a small frame throughout the recording.
 **Before recording:** Rehearse from this outline, but explain the code in your own words. Show the named files and live app as you speak.
 
 ## Opening — 0:00–0:15
@@ -31,7 +32,9 @@ Show the comparison table, the allocation/return charts, the stress table, and t
 
 “Beyond the required comparison, I added a baseline-gap table that explains the return, volatility, BIL, and failed-rule differences between the recommended portfolio and each baseline. I also added an allocation robustness map across return targets and estimation windows.”
 
-“For implementation, the rebalancing action card compares current weights with the constrained target. It returns hold, rebalance, or committee review rather than pretending the app can trade automatically. For the credit-monitoring test, I changed the fallback latest spread from 0.84% to 0.87% and the trailing median to 0.86%. The app correctly displayed an LQD committee-review message. This is intentionally not an automatic trade rule, so it did not automatically change the portfolio weights.”
+“My highest-risk financial test is the estimation-window stress. When I use the latest 36 monthly returns instead of the all-history base window, the constrained mix changes to 70% BIL, 15% IEF, 0% LQD, and 15% ACWI. Its net return estimate is 6.59% and volatility is 2.44%. ACWI moves from 40% to 15%, which is a 25-point move and reaches the committee-review trigger.”
+
+“For implementation, the rebalancing action card compares current weights with the constrained target. It returns hold, rebalance, or committee review rather than pretending the app can trade automatically. As a separate signal-governance check, entering a fallback latest spread of 0.87% against a 0.86% trailing median displays an LQD committee-review message. This is intentionally not an automatic trade rule, so it does not automatically change portfolio weights.”
 
 ## Limitation and closing — 4:05–5:00
 

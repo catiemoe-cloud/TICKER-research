@@ -273,9 +273,9 @@ def evaluate_mandate(
     checks = {
         "Weights sum to 100%": abs(total_weight - 1.0) < 1e-9,
         "Long-only": lowest_weight >= -1e-9,
-        f"Net return estimate at least {objective:.1%}": net_return >= objective,
-        f"BIL at least {minimum_bil:.0%}": weights.get("BIL", 0.0) >= minimum_bil,
-        f"No ETF above {maximum_asset:.0%}": largest_weight <= maximum_asset,
+        f"Net return estimate at least {objective:.1%}": net_return >= objective - 1e-9,
+        f"BIL at least {minimum_bil:.0%}": weights.get("BIL", 0.0) >= minimum_bil - 1e-9,
+        f"No ETF above {maximum_asset:.0%}": largest_weight <= maximum_asset + 1e-9,
     }
     return {
         "weights": weights,

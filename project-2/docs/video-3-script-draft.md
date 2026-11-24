@@ -3,6 +3,7 @@
 **Maximum length:** 5:00
 
 **Required opening:** Start with the live Streamlit app already running on screen.
+**Webcam:** Keep your face visible in a small frame throughout the recording.
 **Before recording:** Replace any bracketed note with your own truthful wording and show the live dashboard as you make each claim.
 
 ## Live-app opening and disclosure — 0:00–0:20
@@ -39,4 +40,4 @@ Show the stress section and signal card.
 
 ## Conditions and close — 3:45–5:00
 
-“The committee should pause or reverse the pilot if a stress run moves any allocation by 25 points or more, if the portfolio misses the return target, or if the credit-monitoring process requires review. My final ask is to approve only the monitored pilot and require the quarterly review process before any broader allocation.”
+“The committee should pause or reverse the pilot if the latest-36-month window moves any allocation by 25 percentage points or more versus the all-history base window, if the portfolio misses the return target, or if the credit-monitoring process requires review. My final ask is to approve only the monitored pilot and require the quarterly review process before any broader allocation.”

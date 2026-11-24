@@ -28,7 +28,7 @@
 
 ## Frozen-package checklist
 
-- [ ] Enter the exact Codex model/version in `validation-and-ai-use.md`.
+- [x] Codex model/version is recorded in `validation-and-ai-use.md` as GPT-5.6-Terra (medium).
 - [ ] Complete a strict Locked Changed-Input Record with the exact old/new values committed before the run, if the current record is not accepted by the instructor.
 - [ ] Record and upload the three videos as Unlisted or Public YouTube videos; never Private.
 - [ ] Correct captions for finance terms, tickers, names, and material numbers.

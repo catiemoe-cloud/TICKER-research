@@ -73,6 +73,7 @@ and exactly four ticker columns: `BIL`, `IEF`, `LQD`, and `ACWI`.
 - `docs/decision-memo.md` — written committee recommendation.
 - `docs/validation-and-ai-use.md` — sources, tests, limitations, AI-use record, and Locked Changed-Input Record.
 - `docs/submission-manifest.md` — Brightspace delivery links and the remaining video/transcript checklist.
+- `docs/video-recording-guide.md` — verified recording screen states, values, and section-by-section video plan.
 - `docs/video-*-script-draft.md` — recording outlines; final corrected transcripts are added after recording.
 - `outputs/visible_output.md` — current readable executed-output artifact.
 - `PROJECT2_PLAN.md` — complete build and submission timeline.
