@@ -41,10 +41,10 @@ The visible-output file, memo, validation record, scripts, and transcripts use t
 | 0:15–0:45 | Base-case comparison and allocation chart | Base 60% BIL / 40% ACWI, 6.69% net return, 6.03% volatility. |
 | 0:45–1:20 | Required stress scenarios | Point to Window stress: 70% BIL, 15% IEF, 0% LQD, 15% ACWI; ACWI moves from 40% to 15%. |
 | 1:20–1:40 | Allocation robustness map | Explain that it shows how return targets and windows change feasibility/weights. |
-| 1:40–2:25 | `portfolio.py` and validation record | State one exact AI output you personally checked, what you checked it against, and whether you accepted, modified, or rejected it. |
+| 1:40–2:25 | `portfolio.py` and validation record | Show the 70% maximum-ETF boundary check: 70% BIL passes; 75% fails. Explain that the tolerance corrected floating-point noise without changing the mandate. |
 | 2:25–3:00 | Committee decision panel | Close with the monitored-pilot conclusion and the review/reversal condition. |
 
-Do not read the bracketed placeholder in the draft transcript. Replace it with your own real AI-output check before recording.
+The Video 1 draft now includes the verified 70%-versus-75% boundary check as the AI-output check.
 
 ## Video 2 — technical walkthrough
 

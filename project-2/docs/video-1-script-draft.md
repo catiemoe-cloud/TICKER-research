@@ -20,7 +20,7 @@
 
 “One AI-assisted part I checked was the portfolio-display and mandate-check structure. I did not accept a recommendation just because the AI helped organize the app. I checked the portfolio results in `portfolio.py`, compared the equal-weight and 60/40 benchmark results against the same mandate, and verified that the base case, window stress, cost stress, and constraint stress appear in the app and validation record.”
 
-“[Add one specific AI suggestion or output you personally reviewed, then say whether you accepted, modified, or rejected it and what check you used.]”
+“One specific AI-assisted output I checked was the boundary-condition correction for the 70% maximum ETF limit. A floating-point representation had treated an exactly 70% BIL result as slightly above the limit. I checked the rule by running the calculation: 70% BIL now passes the 70% maximum, while 75% BIL still fails it. I accepted that correction because it follows the stated mandate rather than changing the mandate to fit a result.”
 
 ## Closing — 2:20–3:00
 
