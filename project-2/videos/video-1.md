@@ -1,0 +1,21 @@
+# Video 1 — System Change and AI Check
+
+**YouTube:** https://youtu.be/-GlGElwO-AY
+
+## Corrected captions
+
+[0:00] For this video, I'm going to be showing my system change and AI check. This is my live Streamlit app, and my Project 2 system is a continuous growth portfolio process using BIL, IEF, LQD, and ACWI.
+
+[0:16] Looking at my base test, at first I focus on the lowest-volatility allocation that reached the 6.5% historical return target. The base case is 60% BIL, 40% ACWI, and a 6.69% net return estimate with 6.03% annualized volatility.
+
+[0:35] Next, looking at the estimate-required stress scenarios, the last 36 monthly returns changed the mix to 70% BIL, 15% IEF, 0% LQD, and 15% ACWI. ACWI did move 25 points, reaching a review trigger.
+
+[0:55] Next, looking at the allocation robustness map, the sensitivity changed my recommendation to a monitored pilot with a 55 to 65% BIL range and a 35 to 45% ACWI range. I added a robustness map so the committee can see whether weights change across the return targets and time windows.
+
+[1:16] One AI-assisted output I checked was the boundary-condition correction for the 70% maximum ETF limit. A floating representation had treated exactly 70% BIL as slightly above the limit. I ran the calculation. 70% now passes while 75% still fails. I accept that correction because it follows the mandate instead of changing the mandate to fix a result.
+
+[1:43] Looking at line 25 of my validation and AI use, we can see that this verifies my locked changed-input prediction before running the window test and committed it to GitHub. This result matched. Net return fell from 6.69% to 6.56%. Volatility fell from 6.03% to 2.44%. ACWI fell from 40% to 15%.
+
+[2:10] Going back to my app and looking at the committee decision panel, the biggest change in my thinking was that the portfolio screen is useful only if it shows when its answer is unstable. My process, however, gives the committee a transparent pilot, stress results, and conditions for review or reversal.
+
+Note: The recording captions state 6.56% at 1:54–2:00. The app and locked changed-input record state 6.59%.
