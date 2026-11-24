@@ -81,3 +81,12 @@ Education, not investment advice.
 - Expected numeric change in weights: BIL rises from 60% to 70% (+10 percentage points), IEF rises from 0% to 15% (+15 points), LQD stays at 0%, and ACWI falls from 40% to 15% (−25 points).
 - Expected pilot/review/reject decision effect: Committee Review. The stressed portfolio still passes the 6.50% net return requirement, and the 25-point drop in ACWI hits the app’s review trigger.
 - Why this is the highest-risk input: Chose the estimation window because it changes the historical data used to estimate both returns and risk. In the displayed stress tests, it produces the largest allocation shift. The estimated return changes by only 0.10 percentage points, while the recommended equity weight drops from 40% to 15%. That makes the pilot allocation sensitive to which months the model uses.
+
+### After execution — student-reported result
+
+- Before-output location: Section 07, Selected interactive view, in the Constrained portfolio row. The window was November 2021 through September 2026, with annual cost set to 0 basis points. Before screenshot: 9:21:45 PM.
+- After-output location: Section 07, Selected interactive view, in the Constrained portfolio row. The window was October 2023 through September 2026, with annual cost still at 0 basis points. After screenshot: 9:27:45 PM. The full ETF weights are in Section 04, Required stress scenarios, in the Window stress row of screenshot 9:27:40 PM.
+- Actual return, volatility, and weight changes: Estimated annual net return fell from 6.69% to 6.59% (−0.10 percentage points). Annualized volatility fell from 6.03% to 2.44% (−3.59 percentage points). BIL rose from 60% to 70% (+10 points), IEF rose from 0% to 15% (+15 points), LQD stayed at 0%, and ACWI fell from 40% to 15% (−25 points).
+- Actual decision effect: The 36-month portfolio passed the 6.50% net return requirement. The Action today card continued to show COMMITTEE REVIEW because the 25-point drop in ACWI met the review threshold. The tentative recommendation at the top continued to show PILOT.
+- Did it match my prediction? Why or why not?: Yes. The return, volatility, and weight changes matched the 36-month stress results used to make the prediction. The portfolio still met the mandate, and the ACWI shift was large enough to require committee review.
+- Failure diagnosis if it did not match: N/A.

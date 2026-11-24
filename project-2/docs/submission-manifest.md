@@ -29,7 +29,7 @@
 ## Frozen-package checklist
 
 - [x] Codex model/version is recorded in `validation-and-ai-use.md` as GPT-5.6-Terra (medium).
-- [ ] Complete a strict Locked Changed-Input Record with the exact old/new values committed before the run, if the current record is not accepted by the instructor.
+- [x] Complete a strict Locked Changed-Input Record with exact old/new values, a numeric prediction, and a pre-run GitHub commit. The corrected prediction is locked in commit `c07a267`.
 - [ ] Record and upload the three videos as Unlisted or Public YouTube videos; never Private.
 - [ ] Correct captions for finance terms, tickers, names, and material numbers.
 - [ ] Replace the draft `docs/transcript-video-1.txt`, `docs/transcript-video-2.txt`, and `docs/transcript-video-3.txt` files with corrected final transcripts after recording.
